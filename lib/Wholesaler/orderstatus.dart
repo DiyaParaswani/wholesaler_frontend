@@ -37,8 +37,22 @@ class _OrderStatusState extends State<OrderStatus> {
       appBar: AppBar(
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => NotifyRetailer()),
+            );
+          },
         ),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.arrow_forward),
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => Orders()),
+              );
+            },
+          ),
+        ],
         title: Center(
             child: Text("Order Status",
                 style: TextStyle(fontWeight: FontWeight.bold))),
@@ -67,7 +81,7 @@ class _OrderStatusState extends State<OrderStatus> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       //  SizedBox(width:0.5),
-                      Container(width:60,height:60,child: Image.asset("order_taken.png")),
+                      Container(width:60,height:60,child: Image.asset("assets/order_taken.png")),
                       // SizedBox(width:40),
                       Container(child:Center(child: Text("Order Confirmed",style: TextStyle(fontSize: 20),)),),
                       // SizedBox(width:100),
@@ -93,7 +107,7 @@ class _OrderStatusState extends State<OrderStatus> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       //  SizedBox(width:0.5),
-                      Container(width:60,height:60,child: Image.asset("order_prepared.png")),
+                      Container(width:60,height:60,child: Image.asset("assets/order_prepared.png")),
                       // SizedBox(width:40),
                       Container(child:Center(child: Text("Order Prepared",style: TextStyle(fontSize: 20),)),),
                       // SizedBox(width:100),
@@ -119,7 +133,7 @@ class _OrderStatusState extends State<OrderStatus> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       //  SizedBox(width:0.5),
-                      Container(width:60,height:60,child: Image.asset("out_for_delivery.jpg")),
+                      Container(width:60,height:60,child: Image.asset("assets/out_for_delivery.jpg")),
                       // SizedBox(width:40),
                       Container(child:Center(child: Text("Out for Delivery",style: TextStyle(fontSize: 20),)),),
                       // SizedBox(width:100),
@@ -145,7 +159,7 @@ class _OrderStatusState extends State<OrderStatus> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       //  SizedBox(width:0.5),
-                      Container(width:80,height:80,child: Image.asset("order_delivered.png")),
+                      Container(width:80,height:80,child: Image.asset("assets/order_delivered.png")),
                       // SizedBox(width:40),
                       Container(child:Center(child: Text("Order Delivered",style: TextStyle(fontSize: 20),)),),
                       // SizedBox(width:100),

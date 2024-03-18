@@ -277,22 +277,25 @@ class _AddAuctionState extends State<AddAuction> {
                 ),
               ),
               SizedBox(height: 30),
-              Container(
-                child: SizedBox(
-                  width: 200,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => Bids()),
-                      );
-
-                    },
-                    child: Text("Start"),
-                    style: ButtonStyle(
-                      backgroundColor:
-                      MaterialStateProperty.all(Colors.lightGreenAccent),
-                      foregroundColor: MaterialStateProperty.all(Colors.white),
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => Bids()),
+                    );
+                  },
+                  child: Text(
+                    "Start",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.lightGreen,
+                    onPrimary: Colors.white,
+                    elevation: 5,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
                     ),
+                    padding: EdgeInsets.symmetric(horizontal: 160, vertical: 10),
                   ),
                 ),
               ),

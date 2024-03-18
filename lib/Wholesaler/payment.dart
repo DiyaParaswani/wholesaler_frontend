@@ -36,7 +36,9 @@ class Payment extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            // Handle back button press
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => OrderStatus()),
+            );
           },
         ),
       ),
@@ -79,7 +81,7 @@ class Payment extends StatelessWidget {
                   children: [
                     // Image
                     CircleAvatar(
-                      backgroundImage: AssetImage('1.png'),
+                      backgroundImage: AssetImage('assets/1.png'),
                       radius: 25,
                     ),
                     // Name and product details
