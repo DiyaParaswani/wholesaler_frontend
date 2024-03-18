@@ -36,7 +36,9 @@ class Bids extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            // Handle back button press
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => MyAuction()),
+            );
           },
         ),
         actions: <Widget>[

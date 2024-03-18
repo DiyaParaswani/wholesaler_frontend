@@ -211,16 +211,25 @@ class NotifyRetailer extends StatelessWidget {
               ),
               SizedBox(height:20),
               // start notify btn
-              Container(
-                child:SizedBox(
-                  width: 200,
-                  child: ElevatedButton(onPressed: (){
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => OrderStatus()),
                     );
-
-                  }, child: Text("Order Status"),style:ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.lightGreenAccent),foregroundColor: MaterialStateProperty.all(Colors.white)),
-
+                  },
+                  child: Text(
+                    "Order Status",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.lightGreen,
+                    onPrimary: Colors.white,
+                    elevation: 5,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    padding: EdgeInsets.symmetric(horizontal: 100, vertical: 10),
                   ),
                 ),
               ),

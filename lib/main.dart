@@ -22,8 +22,10 @@ import 'package:wholesaler/Wholesaler/payment.dart';
 
 void main() {
   runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
+
     home: MyApp(),
+
+
   ));
 }
 

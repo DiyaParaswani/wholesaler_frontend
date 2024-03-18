@@ -85,7 +85,7 @@ class Orders extends StatelessWidget {
                       // below is image
                       ClipOval(
                         child: Image.asset(
-                          '1.png',
+                          'assets/1.png',
                           width: 50,
                           height: 50,
                           fit: BoxFit.cover,
@@ -122,7 +122,9 @@ class Orders extends StatelessWidget {
                               bottom: 0,
                               child: ElevatedButton(
                                 onPressed: () {
-                                  // Handle your Start functionality
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(builder: (context) => Payment()),
+                                  );
                                   print('Start clicked');
                                 },
                                 style: ElevatedButton.styleFrom(
@@ -137,7 +139,7 @@ class Orders extends StatelessWidget {
                                         Colors.lightGreen), // Button border color
                                   ),
                                 ),
-                                child: Text('Order Status'),
+                                child: Text('Payment'),
                               ),
                             ),
                           ),

@@ -81,7 +81,7 @@ class _AuctionCompletedState extends State<AuctionCompleted> with SingleTickerPr
               Container(
                 child:SizedBox(
                   width: 200,
-                  child: ElevatedButton(onPressed: (){}, child: Text("Notify Winner"),style:ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.lightGreenAccent),foregroundColor: MaterialStateProperty.all(Colors.white)),
+                  child: ElevatedButton(onPressed: (){}, child: Text("Notify Winner"),style:ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.lightGreen),foregroundColor: MaterialStateProperty.all(Colors.white)),
 
                   ),
                 ),
